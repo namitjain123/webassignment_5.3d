@@ -1,0 +1,20 @@
+# Ignore node_modules directory
+node_modules/
+
+# Ignore npm logs
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# Ignore environment files (if you have them)
+.env
+
+# Ignore build artifacts or temporary files
+/dist
+/build
+*.log
+*.bak
+
+# Ignore system-specific files (optional)
+.DS_Store   # macOS
+Thumbs.db   # Windows

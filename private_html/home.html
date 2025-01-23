@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Car Booking Website</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <style>
+    .card:hover {
+      transform: scale(1.05);
+      transition: transform 0.3s;
+    }
+    .service-card img {
+      max-height: 200px;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="home.html">Car Booker</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link active" href="home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="cars.html">Car Listings</a></li>
+          <li class="nav-item"><a class="nav-link" href="booking.html">Booking</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Home Section -->
+  <header class="bg-light text-center py-5">
+    <h1 id="dynamicGreeting" class="display-4">Welcome to Car Booker</h1>
+    <p>Your trusted partner in booking premium cars for any occasion.</p>
+    <a href="booking.html" class="btn btn-primary btn-lg">Book a Car</a>
+  </header>
+  
+  <!-- Services Section -->
+  <section class="container my-5">
+    <h2 class="text-center mb-4">Our Services</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card service-card mb-4">
+          <img src="images/luxury car.png" class="card-img-top" alt="Luxury Cars">
+          <div class="card-body">
+            <h5 class="card-title">Luxury Cars</h5>
+            <p class="card-text">Experience the luxury of top-tier vehicles. From sleek sports cars to elegant sedans, we have the perfect ride for you.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card service-card mb-4">
+          <img src="images/suv rental.png" class="card-img-top" alt="SUVs">
+          <div class="card-body">
+            <h5 class="card-title">SUV Rentals</h5>
+            <p class="card-text">Take on any terrain in comfort and style with our premium SUV fleet. Perfect for long drives and family trips.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card service-card mb-4">
+          <img src="images/event car.png" class="card-img-top" alt="Event Rentals">
+          <div class="card-body">
+            <h5 class="card-title">Event Car Rentals</h5>
+            <p class="card-text">Make your special occasion memorable by arriving in style. We offer luxury car rentals for weddings, parties, and corporate events.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Cars Section -->
+  <section class="container my-5">
+    <h2 class="text-center mb-4">Featured Cars</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card">
+          <img src="images/ferrari.png" class="card-img-top" alt="Car 1">
+          <div class="card-body">
+            <h5 class="card-title">Ferrari 488</h5>
+            <p class="card-text">A sleek and powerful sports car that delivers speed and luxury in one package.</p>
+            <a href="booking.html" class="btn btn-primary">Book Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img src="images/lemo.png" class="card-img-top" alt="Car 2">
+          <div class="card-body">
+            <h5 class="card-title">Lamborghini Huracan</h5>
+            <p class="card-text">Unmatched performance and design. Feel the thrill of driving a Lamborghini.</p>
+            <a href="booking.html" class="btn btn-primary">Book Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img src="images/range rover.png" class="card-img-top" alt="Car 3">
+          <div class="card-body">
+            <h5 class="card-title">Range Rover Sport</h5>
+            <p class="card-text">Experience the luxury and off-road capability of the Range Rover Sport.</p>
+            <a href="booking.html" class="btn btn-primary">Book Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonial Section -->
+  <section class="bg-light py-5">
+    <div class="container text-center">
+      <h2 class="mb-4">What Our Customers Say</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card mb-4">
+            <div class="card-body">
+              <p class="card-text">"Car Booker made our wedding day even more special. The car was pristine, and the service was impeccable. Highly recommend!"</p>
+              <footer class="blockquote-footer">Sarah & John</footer>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-4">
+            <div class="card-body">
+              <p class="card-text">"I rented an SUV for a family road trip. It was comfortable and spacious. I will definitely use Car Booker again!"</p>
+              <footer class="blockquote-footer">Michael T.</footer>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-4">
+            <div class="card-body">
+              <p class="card-text">"I used Car Booker for my business trip, and the car was exactly what I needed. Clean, stylish, and reliable."</p>
+              <footer class="blockquote-footer">David W.</footer>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <button id="scrollToTop" class="btn btn-primary" style="position: fixed; bottom: 20px; right: 20px; display: none;">↑ Top</button>
+  <!-- Footer -->
+  <footer class="bg-primary text-white text-center py-3">
+    <p>&copy; 2024 Car Booker. All rights reserved.</p>
+    <p>Follow us on <a href="#" class="text-white">Facebook</a>, <a href="#" class="text-white">Twitter</a>, and <a href="#" class="text-white">Instagram</a>.</p>
+  </footer>
+
+  <script src="validationIndex.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

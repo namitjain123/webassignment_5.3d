@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Booking - Car Booker</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="home.html">Car Booker</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="home">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+            <li class="nav-item"><a class="nav-link" href="cars.html">Car Listings</a></li>
+            <li class="nav-item"><a class="nav-link active" href="booking.html">Booking</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Booking Form Section -->
+  <section class="container my-5">
+    <h2 class="text-center mb-4">Car Booking Form</h2>
+    <form>
+      <div class="mb-3">
+        <label for="carModel" class="form-label">Select Car Model</label>
+        <select id="carModel" class="form-select" required>
+          <option value="">Choose a car</option>
+          <option value="car1">Car Model 1</option>
+          <option value="car2">Car Model 2</option>
+          <option value="car3">Car Model 3</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label for="pickupLocation" class="form-label">Pick-up Location</label>
+        <input type="text" class="form-control" id="pickupLocation" required>
+      </div>
+      <div class="mb-3">
+        <label for="dropoffLocation" class="form-label">Drop-off Location</label>
+        <input type="text" class="form-control" id="dropoffLocation" required>
+      </div>
+      <div class="mb-3">
+        <label for="pickupDate" class="form-label">Pick-up Date</label>
+        <input type="date" class="form-control" id="pickupDate" required>
+      </div>
+      <div class="mb-3">
+        <label for="dropoffDate" class="form-label">Drop-off Date</label>
+        <input type="date" class="form-control" id="dropoffDate" required>
+      </div>
+
+<div class="mb-3">
+  <label id="pickupLocationCharCount" class="form-text text-muted"></label>
+</div>
+<div class="mb-3">
+  <label id="dropoffLocationCharCount" class="form-text text-muted"></label>
+</div>
+<div id="availabilityMessage" class="mt-2"></div>
+
+      <button type="submit" class="btn btn-primary">Book Now</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-primary text-white text-center py-3">
+    <p>&copy; 2024 Car Booker. All rights reserved.</p>
+  </footer>
+  <script src="validationBooking.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
