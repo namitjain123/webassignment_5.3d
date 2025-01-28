@@ -4,7 +4,7 @@ const bcrypt = require('bcrypt');
 const bodyParser = require('body-parser');
 const path = require('path');
 const session = require('express-session'); // For session management
-require('dotenv').config(); // Load environment variables
+require('dotenv').config(); 
 
 const app = express();
 const PORT = process.env.PORT || 3003; 
@@ -31,7 +31,7 @@ app.use(express.static(path.join(__dirname, 'public_html'), {
 
 // MongoDB Connection process.env.MONGO_URI
 mongoose
-  .connect('mongodb+srv://namitjain123:namit@carbooking.esec1.mongodb.net/')
+  .connect(process.env.MONGO_URI)
   .then(() => console.log("DB Connection Successful!"))
   .catch((err) => {
     console.log(err);
