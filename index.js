@@ -29,9 +29,9 @@ app.use(express.static(path.join(__dirname, 'public_html'), {
   extensions: ['html'],
 }));
 
-// MongoDB Connection
+// MongoDB Connection process.env.MONGO_URI
 mongoose
-  .connect(process.env.MONGO_URI)
+  .connect('mongodb+srv://namitjain123:namit@carbooking.esec1.mongodb.net/')
   .then(() => console.log("DB Connection Successful!"))
   .catch((err) => {
     console.log(err);
