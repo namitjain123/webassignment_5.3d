@@ -19,20 +19,21 @@ app.use(
     secret: process.env.SESSION_SECRET || 'mysecretkey',
     resave: false,
     saveUninitialized: false,
-    cookie: { secure: false }, // Set to true if using HTTPS
+    cookie: { secure: false }, 
   })
 );
 
 // Serve static files only for public pages (e.g., login.html)
 app.use(express.static(path.join(__dirname, 'public_html'), {
-  index: false, // Prevents serving home.html automatically
+  index: false, 
   extensions: ['html'],
 }));
 
 // MongoDB Connection process.env.MONGO_URI
 mongoose
   .connect(process.env.MONGO_URI)
-  .then(() => console.log("DB Connection Successful!"))
+  .then(() => console.log('Mongo URI:', process.env.MONGO_URI)
+)
   .catch((err) => {
     console.log(err);
   });
@@ -43,13 +44,13 @@ const userSchema = new mongoose.Schema({
   password: { type: String, required: true },
 });
 
-const feedbackSchema = new mongoose.Schema({
-  name: { type: String, required: true },
-  mobile: { type: String, required: true },
-  email: { type: String, required: true },
-  message: { type: String, required: true },
-  date: { type: Date, default: Date.now },
-});
+  const feedbackSchema = new mongoose.Schema({
+    name: { type: String, required: true },
+    mobile: { type: String, required: true },
+    email: { type: String, required: true },
+    message: { type: String, required: true },
+    date: { type: Date, default: Date.now },
+  });
 
 const carSchema = new mongoose.Schema({
   make: { type: String, required: true },
@@ -90,7 +91,7 @@ app.post('/api/feedback', async (req, res) => {
 
 // Serve Login Page
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public_html', 'login.html')); // Ensure correct path
+  res.sendFile(path.join(__dirname, 'public_html', 'login.html'));
 });
 
 // Serve Home Page (Protected Route)
@@ -184,7 +185,6 @@ app.post('/api/add-car', async (req, res) => {
 });
 
 
-//this middleware will handle any uncaught error
 app.use((err, req, res, next) => {
   console.error(err.stack); // Log the error stack trace for debugging
   res.status(500).json({ error: 'Something went wrong!' }); // Send a generic error response
